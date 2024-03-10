@@ -112,7 +112,7 @@ if cfg_type.lower() == 'preproc':
             f.write(f"{key} {curr_params[key]}\n")
     if bsf:
         bslist = np.loadtxt(bsfile, comments='#')
-        np.savetxt(f, bsf)
+        np.savetxt(f, bslist, fmt="%d %d %.2f")
     else:
         buff = []
         for i in range(nslice):
