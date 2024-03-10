@@ -43,13 +43,13 @@ FASTPM=/home/suqikuai777/applications/Simulations/fastpm/src/fastpm # execute fi
 CONVERT=/home/suqikuai777/applications/Simulations/fastpm/python/convert-to-gadget-1.py # execute file of converting to gadget format
 
 ### FastPM params
-nrlz=5
 irlz=2
+nbox=5
 iseed=$(($irlz+1))00 # initial random seed
 nc=256 # simulation particle number
 
 cfgdir=${cfgdir}/rlz$irlz/
-seedinfo=${cfgdir}/seed_${iseed}_$(($iseed+$nrlz-1))
+seedinfo=${cfgdir}/seed_${iseed}_$(($iseed+$nbox-1))
 
 if [ ! -d $cfgdir ]; then
     mkdir $cfgdir
@@ -115,7 +115,7 @@ if [ ! -d $lcdir ]; then
 fi
 
 if [ $LCPART_FLAG -eq 1 ]; then
-    python $MKCFG preproc -SIMPATH $catdir -SIMBASE rlz${irlz}/box -SNAPBASE gadget/snapshot -SIMNUM $nrlz -NPART $nc -FILENUM 1 -SLICEPATH ${lcdir} -HALOPATH ${catdir}/HALO -LIST 1 -b $nrlz -s $nslice -w $dr -ofile $cfgpath
+    python $MKCFG preproc -SIMPATH $catdir -SIMBASE rlz${irlz}/box -SNAPBASE gadget/snapshot -SIMNUM $nbox -NPART $nc -FILENUM 1 -SLICEPATH ${lcdir} -HALOPATH ${catdir}/HALO -LIST 1 -b $nbox -s $nslice -w $dr -ofile $cfgpath
     echo -e "Generate LC configuration file [\e[32mDONE\e[0m]"
 
     ### run lightcone
