@@ -154,3 +154,31 @@ if cfg_type.lower() == 'gluons':
             f.write(f"{key} {curr_params[key]}\n")
 
     f.close()
+
+if cfg_type.lower() == 'fcfc':
+    ofile = "fcfc_2pt_box.conf"
+    curr_params = fcfc_params.copy()
+
+    for idx, param in enumerate(sys.argv):
+        if param[0] == '-':
+            value = sys.argv[idx+1]
+            if param[1:] not in curr_params.keys() and param[1:] not in extra_params:
+                warnings.warn(f"Cannot recognize key {param}. Ignored.")
+            else:
+                param = param[1:]
+                if param == 'ofile':
+                    ofile = value
+                elif param in curr_params.keys():
+                    if param in fcfc_int_keys:
+                        curr_params[param] = int(value)
+                    elif param in fcfc_float_keys:
+                        curr_params[param] = float(value)
+                    else:
+                        curr_params[param] = (value)
+
+    f = open(ofile, 'w+', encoding='utf-8')
+    for key in curr_params.keys():
+        if curr_params[key] is not None:
+            f.write(f"{key} = {curr_params[key]}\n")
+
+    f.close()    

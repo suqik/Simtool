@@ -1,5 +1,5 @@
 ### This file contains parameter dictionarys for different parameter files. ###
-param_list = ['fastpm', 'preproc', 'gluons']
+param_list = ['fastpm', 'preproc', 'gluons', 'fcfc']
 ### FastPM
 fastpm_params={'nc':                       256,
                 'boxsize':                 400.0,
@@ -58,3 +58,25 @@ gluons_params = {'OMEGAX': 0.6727,
 }
 ray_int_keys = ['NUMSLC', 'NUMDEC', 'NUMRA', 'NGRID']
 ray_float_keys = ['OMEGAX', 'OMEGAM', 'HUBBLE', 'RNGDEC', 'RNGRA', 'CTRDEC', 'CTRRA', 'SMOOTH', 'ZSOURC']
+
+### Void Finder
+fcfc_params = {'CATALOG': "[simu.cat, rand.cat]",
+               'CATALOG_LABEL': "[D, R]",
+               'ASCII_FORMATTER': "[\"%f %f %f\", \"%f %f %f\"]",
+               'POSITION': "[$1, $2, $3, $1, $2, $3]",
+               'SELECTION': None,
+               'BOX_SIZE': 400.0,
+               'BINNING_SCHEME': 0,
+               'PAIR_COUNT': "[DD, DR, RR]",
+               'PAIR_COUNT_FILE': "[pair.dd, pair.dr, pair.rr]",
+               'CF_ESTIMATOR': "(DD - 2DR + RR)/RR",
+               'CF_OUTPUT_FILE': "2pcf.dat",
+               'SEP_BIN_FILE': None,
+               'SEP_BIN_MIN': 0.0,
+               'SEP_BIN_MAX': 100.0,
+               'SEP_BIN_SIZE': 1.0,
+               'OUTPUT_FORMAT': 1,
+               'OVERWRITE': 1
+}
+fcfc_int_keys = ['BINNING_SCHEME', 'OUTPUT_FORMAT', 'OVERWRITE']
+fcfc_float_keys = ['BOX_SIZE', 'SEP_BIN_MIN', 'SEP_BIN_MAX', 'SEP_BIN_SIZE']
