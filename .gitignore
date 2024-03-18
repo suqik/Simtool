@@ -1,2 +1,5 @@
 __pycache__
 old
+get_void_profile.sh
+void_finder.sh
+mk-bsfile.py

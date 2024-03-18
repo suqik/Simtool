@@ -13,8 +13,9 @@ fastpm_params={'nc':                       256,
                 'force_mode':              "\"fastpm\"",
                 'pm_nc_factor':            2,
                 'np_alloc_factor':         3,
-                'write_snapshot':          "\"fastpm\"",
-                'write_powerspectrum':     None
+                'write_snapshot':          None,
+                'write_powerspectrum':     None,
+                'write_rfof':              None
 }
 fpm_int_keys = ['nc', 'random_seed', 'pm_nc_factor', 'np_alloc_factor']
 fpm_float_keys = ['boxsize', 'Omega_m', 'hubble', 'linear_density_redshift']
