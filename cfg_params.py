@@ -15,9 +15,10 @@ fastpm_params={'nc':                       256,
                 'np_alloc_factor':         3,
                 'write_snapshot':          None,
                 'write_powerspectrum':     None,
-                'write_rfof':              None
+                'write_rfof':              None,
+                'rfof_nmin':               None
 }
-fpm_int_keys = ['nc', 'random_seed', 'pm_nc_factor', 'np_alloc_factor']
+fpm_int_keys = ['nc', 'random_seed', 'pm_nc_factor', 'np_alloc_factor', 'rfof_nmin']
 fpm_float_keys = ['boxsize', 'Omega_m', 'hubble', 'linear_density_redshift']
 fpm_special_keys = ['time_step', 'output_redshifts']
 
