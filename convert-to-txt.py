@@ -20,4 +20,4 @@ if fclass.lower() == 'bigfile':
     np.savetxt(ofile, np.array(cat['Position']), fmt='%.3f %.3f %.3f')
 if fclass.lower() == 'ahf':
     cat = np.loadtxt(file)
-    np.savetxt(ofile, cat[:,5:8], fmt='%.3f %.3f %.3f')
+    np.savetxt(ofile, cat[:,5:8]/1000., fmt='%.3f %.3f %.3f')
