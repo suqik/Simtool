@@ -53,7 +53,6 @@ for (( irlz=0; irlz<10; irlz++ )) do
 
     iseed=$(($irlz+1))00 # initial random seed
 
-
     cfgdir=${wdir}/cfgs/fastpm_cfgs/match_Nbody/rlz$irlz/
     seedinfo=${cfgdir}/seed_${iseed}_$(($iseed+$nbox-1))
 
@@ -75,14 +74,14 @@ for (( irlz=0; irlz<10; irlz++ )) do
             cfgpath=${cfgdir}/box$ibox.lua
             snapdir=${catdir}/rlz$irlz/box$ibox
 
-            # $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_powerspectrum $powerpath -random_seed $seed -write_rfof ${snapdir}/a -ofile $cfgpath
-            # echo -e "Generate FastPM configuration file [\e[32mDONE\e[0m]"
+            $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_powerspectrum $powerpath -random_seed $seed -write_snapshot ${snapshot}/a -write_rfof ${snapdir}/a -ofile $cfgpath
+            echo -e "Generate FastPM configuration file [\e[32mDONE\e[0m]"
 
             # run FastPM
             export OMP_NUM_THREADS=2
 
-            # mpirun -np 16 $FASTPM $cfgpath
-            # echo -e "Run FastPM [\e[32mDONE\e[0m]"
+            mpirun -np 16 $FASTPM $cfgpath
+            echo -e "Run FastPM [\e[32mDONE\e[0m]"
 
             # convert to gadget format
             if [ $CONVERT_FLAG -eq 1 ]; then
@@ -92,9 +91,9 @@ for (( irlz=0; irlz<10; irlz++ )) do
                 CONVERT=${wdir}/Simtool/convert-to-txt.py # execute file of converting to gadget format
                 for file in $files
                 do
-                    # if [ ! -d ${snapdir}/${file}/Void ]; then
-                    #     mkdir ${snapdir}/${file}/Void
-                    # fi
+                    if [ ! -d ${snapdir}/${file}/Void ]; then
+                        mkdir ${snapdir}/${file}/Void
+                    fi
                     $PYTHON $CONVERT ${snapdir}/${file}/ halo ${snapdir}/${file}/halo_tmp.txt
                     $DIVE -i ${snapdir}/${file}/halo_tmp.txt -o ${snapdir}/${file}/Void.txt -u $boxsize
                     rm ${snapdir}/${file}/halo_tmp.txt

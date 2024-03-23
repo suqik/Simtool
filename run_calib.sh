@@ -49,7 +49,7 @@ DIVE=/home/suqikuai777/applications/special/DIVE/DIVE
 ### simulation general settings
 nc=256 # simulation particle number
 boxsize=400 # box length in Mpc/h
-
+# rfof_nmin=50
 iseed=100 # initial random seed
 seedinfo=${cfgdir}/jiajun/seed_${iseed}
 
@@ -70,7 +70,7 @@ if [ $FPMPART_FLAG -eq 1 ]; then
     cfgpath=${cfgdir}/jiajun.lua
     snapdir=${catdir}/jiajun/
 
-    $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_powerspectrum $powerpath -random_seed $seed -write_rfof ${snapdir}/a -ofile $cfgpath
+    $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_powerspectrum $powerpath -random_seed $seed -write_snapshot ${snapdir}/a -write_rfof ${snapdir}/a -ofile $cfgpath
     echo -e "Generate FastPM configuration file [\e[32mDONE\e[0m]"
 
     # run FastPM
@@ -85,7 +85,7 @@ if [ $FPMPART_FLAG -eq 1 ]; then
         CONVERT=${wdir}/Simtool/convert-to-txt.py # execute file of converting to txt
         for file in $files
         do
-            $PYTHON $CONVERT ${snapdir}/${file}/ halo ${snapdir}/${file}/halo_tmp.txt
+            $PYTHON $CONVERT bigfile ${snapdir}/${file}/ halo ${snapdir}/${file}/halo_tmp.txt
             $DIVE -i ${snapdir}/${file}/halo_tmp.txt -o ${snapdir}/${file}/Void.txt -u $boxsize
             rm ${snapdir}/${file}/halo_tmp.txt
         done
