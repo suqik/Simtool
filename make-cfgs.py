@@ -17,6 +17,7 @@ Options for fastpm cfg: \n\
     -Omega_m                   total matter density parameter \n\
     -hubble                    Hubble parameter in km/s/Mpc \n\
     -read_powerspectrum        path of input power spectrum \n\
+    -read_lineark              path of input initial matter distribution \n\
     -linear_density_redshift   redshift of input power spectrum \n\
     -random_seed               random seed\n\
     -force_mode                Force mode used in FastPM \n\

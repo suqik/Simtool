@@ -4,7 +4,7 @@ start=`date +%s`
 ### Note: `dir` means dictionaries, `path` means files.
 wdir=/home/suqikuai777/Program/SBI_Void/simulator/fastpm # working dictionary
 catdir=${wdir}/catalog/calibration # catalog dictionary
-cfgdir=${wdir}/cfgs/fastpm_cfgs/calibration
+cfgdir=${wdir}/cfgs/fastpm_cfgs/calibration/jiajun
 
 if [ ! -d $catdir ]; then
     mkdir $catdir
@@ -24,10 +24,10 @@ SIGMA8=0.831
 ### Flags
 PKLIN_FLAG=1
 FPMPART_FLAG=1
-VOID_FLAG=1
-CONVERT_FLAG=0
-LCPART_FLAG=0
-RAYPART_FLAG=0
+VOID_FLAG=0
+# CONVERT_FLAG=0
+# LCPART_FLAG=0
+# RAYPART_FLAG=0
 
 ##### FastPM Part #####
 
@@ -41,6 +41,8 @@ if [ $PKLIN_FLAG -eq 1 ]; then
     echo -e "Calculate linear power spectrum [\e[32mDONE\e[0m]"
 fi
 
+meshpath=${wdir}/test
+
 MKZSLC=${wdir}/Simtool/make-redshifts.py # execute file of calculating redshifts
 MKCFG=${wdir}/Simtool/make-cfgs.py # execute file of generating configuration
 FASTPM=/home/suqikuai777/applications/Simulations/fastpm/src/fastpm # execute file of FastPM simulation
@@ -51,7 +53,7 @@ nc=256 # simulation particle number
 boxsize=400 # box length in Mpc/h
 # rfof_nmin=50
 iseed=100 # initial random seed
-seedinfo=${cfgdir}/jiajun/seed_${iseed}
+seedinfo=${cfgdir}/seed_${iseed}
 
 if [ ! -d ${cfgdir}/jiajun/ ]; then
     mkdir ${cfgdir}/jiajun/
@@ -62,20 +64,21 @@ fi
 
 if [ $FPMPART_FLAG -eq 1 ]; then
     # calculate output redshifts
-    ZSLC="{0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0}"
+    ZSLC="{0.3}"
 
     # generate configure file
     seed=$(($iseed))
 
-    cfgpath=${cfgdir}/jiajun.lua
-    snapdir=${catdir}/jiajun/
+    cfgpath=${cfgdir}/sameini.lua
+    snapdir=${catdir}/jiajun_sameini/
 
     $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_powerspectrum $powerpath -random_seed $seed -write_snapshot ${snapdir}/a -write_rfof ${snapdir}/a -ofile $cfgpath
+    # $PYTHON $MKCFG fastpm -nc $nc boxsize $boxsize -output_redshifts "$ZSLC" -Omega_m $OmegaM -hubble $Hubble -read_lineark $meshpath -random_seed $seed -write_snapshot ${snapdir}/a -write_rfof ${snapdir}/a -ofile $cfgpath
     echo -e "Generate FastPM configuration file [\e[32mDONE\e[0m]"
 
     # run FastPM
     export OMP_NUM_THREADS=2
-    mpirun -np 16 $FASTPM $cfgpath
+    mpirun -np 16 $FASTPM $cfgpath  -r ../test/
     echo -e "Run FastPM [\e[32mDONE\e[0m]"
 
     # convert to gadget format
