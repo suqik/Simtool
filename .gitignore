@@ -3,7 +3,7 @@ old
 get_void_profile.sh
 void_finder.sh
 mk-bsfile.py
-HODOR/aux/*
-HODOR/configs/*
+HODOR/aux/
+HODOR/configs/
 HODOR/main*
 HODOR/README.md
