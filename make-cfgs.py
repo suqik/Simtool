@@ -1,8 +1,14 @@
 import sys
-sys.path.append("/home/suqikuai777/Program/SBI_Void/simulator/fastpm")
+sys.path.append("/home/suqikuai777/Program/SBI_Void/simulator/fastpm/")
 from Simtool.cfg_params import *
 import numpy as np
 import warnings
+
+def ignore(dict, key):
+    if type(key) is not list:
+        key = [key]
+    for ikey in key:
+        dict[ikey] = None
 
 Usage_message = "Usage: python make-cfgs.py cfg_type [options].\n\
 cfg_type (case insensitive): fastpm  preproc  gluons \n\
@@ -17,7 +23,6 @@ Options for fastpm cfg: \n\
     -Omega_m                   total matter density parameter \n\
     -hubble                    Hubble parameter in km/s/Mpc \n\
     -read_powerspectrum        path of input power spectrum \n\
-    -read_lineark              path of input initial matter distribution \n\
     -linear_density_redshift   redshift of input power spectrum \n\
     -random_seed               random seed\n\
     -force_mode                Force mode used in FastPM \n\
@@ -28,7 +33,6 @@ Options for fastpm cfg: \n\
     -ofile                     path of configuration file. Default is the work dictionary, named `test.lua`"
 
 cfg_type = sys.argv[1]
-
 if cfg_type.lower() not in param_list:
     print(Usage_message)
     if cfg_type != '-h' and cfg_type != '--help':
@@ -156,7 +160,7 @@ if cfg_type.lower() == 'gluons':
 
     f.close()
 
-if cfg_type.lower() == 'fcfc':
+if cfg_type.lower() == 'fcfc_box':
     ofile = "fcfc_2pt_box.conf"
     curr_params = fcfc_params.copy()
 
@@ -179,7 +183,50 @@ if cfg_type.lower() == 'fcfc':
 
     f = open(ofile, 'w+', encoding='utf-8')
     for key in curr_params.keys():
+        ignore(curr_params, fcfc_sky_keys)
+        if curr_params['BINNING_SCHEME'] != 1:
+            ignore(curr_params, fcfc_multipole_keys)
+        if curr_params['BINNING_SCHEME'] != 2:
+            ignore(curr_params, fcfc_proj_keys)
         if curr_params[key] is not None:
             f.write(f"{key} = {curr_params[key]}\n")
 
-    f.close()    
+    f.close()
+
+if cfg_type.lower() == 'fcfc_sky':
+    ofile = "fcfc_2pt.conf"
+    curr_params = fcfc_params.copy()
+
+    for idx, param in enumerate(sys.argv):
+        if param[0] == '-':
+            value = sys.argv[idx+1]
+            if param[1:] not in curr_params.keys() and param[1:] not in extra_params:
+                warnings.warn(f"Cannot recognize key {param}. Ignored.")
+            else:
+                param = param[1:]
+                if param == 'ofile':
+                    ofile = value
+                elif param in curr_params.keys():
+                    if param == 'DE_EOS_W':
+                        if value[0].lower() == 'm':
+                            curr_params[param] = float(value[1:])*-1
+                        else:
+                            curr_params[param] = float(value)
+                    elif param in fcfc_int_keys:
+                        curr_params[param] = int(value)
+                    elif param in fcfc_float_keys:
+                        curr_params[param] = float(value)
+                    else:
+                        curr_params[param] = (value)
+
+    f = open(ofile, 'w+', encoding='utf-8')
+    for key in curr_params.keys():
+        ignore(curr_params, fcfc_box_keys)
+        if curr_params['BINNING_SCHEME'] != 1:
+            ignore(curr_params, fcfc_multipole_keys)
+        if curr_params['BINNING_SCHEME'] != 2:
+            ignore(curr_params, fcfc_proj_keys)
+        if curr_params[key] is not None:
+            f.write(f"{key} = {curr_params[key]}\n")
+
+    f.close()

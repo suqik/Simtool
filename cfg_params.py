@@ -1,5 +1,5 @@
 ### This file contains parameter dictionarys for different parameter files. ###
-param_list = ['fastpm', 'preproc', 'gluons', 'fcfc']
+param_list = ['fastpm', 'preproc', 'gluons', 'fcfc_box', 'fcfc_sky']
 ### FastPM
 fastpm_params={'nc':                       256,
                 'boxsize':                 400.0,
@@ -8,18 +8,15 @@ fastpm_params={'nc':                       256,
                 'Omega_m':                 0.3156,
                 'hubble':                  0.6727,
                 'read_powerspectrum':      "\"powerspec.txt\"",
-                'read_lineark':            None,
                 'linear_density_redshift': 0.0,
                 'random_seed':             100,
                 'force_mode':              "\"fastpm\"",
                 'pm_nc_factor':            2,
                 'np_alloc_factor':         3,
-                'write_snapshot':          None,
-                'write_powerspectrum':     None,
-                'write_rfof':              None,
-                'rfof_nmin':               None
+                'write_snapshot':          "\"fastpm\"",
+                'write_powerspectrum':     None
 }
-fpm_int_keys = ['nc', 'random_seed', 'pm_nc_factor', 'np_alloc_factor', 'rfof_nmin']
+fpm_int_keys = ['nc', 'random_seed', 'pm_nc_factor', 'np_alloc_factor']
 fpm_float_keys = ['boxsize', 'Omega_m', 'hubble', 'linear_density_redshift']
 fpm_special_keys = ['time_step', 'output_redshifts']
 
@@ -68,7 +65,17 @@ fcfc_params = {'CATALOG': "[simu.cat, rand.cat]",
                'ASCII_FORMATTER': "[\"%f %f %f\", \"%f %f %f\"]",
                'POSITION': "[$1, $2, $3, $1, $2, $3]",
                'SELECTION': None,
-               'BOX_SIZE': 400.0,
+               ### FCFC_2PT_BOX param ###
+               'BOX_SIZE': None,
+               ##########################
+               ### FCFC_2PT param ###
+               'WEIGHT': None,
+               'COORD_CONVERT': None,
+               'OMEGA_M': None,
+               'OMEGA_LAMBDA': None,
+               'DE_EOS_W': None,
+               'CMVDST_ERR': None,
+               ######################
                'BINNING_SCHEME': 0,
                'PAIR_COUNT': "[DD, DR, RR]",
                'PAIR_COUNT_FILE': "[pair.dd, pair.dr, pair.rr]",
@@ -78,8 +85,25 @@ fcfc_params = {'CATALOG': "[simu.cat, rand.cat]",
                'SEP_BIN_MIN': 0.0,
                'SEP_BIN_MAX': 100.0,
                'SEP_BIN_SIZE': 1.0,
+               ### multipole params ###
+               'MULTIPOLE': None,
+               'MULTIPOLE_FILE': None,
+               'MU_BIN_NUM': 100,
+               ########################
+               ### projected cf params ###
+               'PROJECTED_CF': None,
+               'PROJECTED_FILE': None,
+               'PI_BIN_FILE': None,
+               'PI_BIN_MIN': 0.0,
+               'PI_BIN_MAX': 100.0,
+               'PI_BIN_SIZE': 1.0,
+               ###########################
                'OUTPUT_FORMAT': 1,
                'OVERWRITE': 1
 }
 fcfc_int_keys = ['BINNING_SCHEME', 'OUTPUT_FORMAT', 'OVERWRITE']
 fcfc_float_keys = ['BOX_SIZE', 'SEP_BIN_MIN', 'SEP_BIN_MAX', 'SEP_BIN_SIZE']
+fcfc_box_keys = ['BOX_SIZE']
+fcfc_sky_keys = ['WEIGHT', 'COORD_CONVERT', 'OMEGA_M', 'OMEGA_LAMBDA', 'CMVDST_ERR']
+fcfc_multipole_keys = ['MULTIPOLE', 'MULTIPOLE_FILE', 'MU_BIN_NUM']
+fcfc_proj_keys = ['PROJECTED_CF', 'PROJECTED_FILE', 'PI_BIN_FILE', 'PI_BIN_MIN', 'PI_BIN_MAX', 'PI_BIN_SIZE']
