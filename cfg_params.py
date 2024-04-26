@@ -61,8 +61,9 @@ ray_float_keys = ['OMEGAX', 'OMEGAM', 'HUBBLE', 'RNGDEC', 'RNGRA', 'CTRDEC', 'CT
 
 ### Void Finder
 fcfc_params = {'CATALOG': "[simu.cat, rand.cat]",
+               'CATALOG_TYPE': "[0, 0]",
                'CATALOG_LABEL': "[D, R]",
-               'ASCII_FORMATTER': "[\"%f %f %f\", \"%f %f %f\"]",
+               'ASCII_FORMATTER': None,
                'POSITION': "[$1, $2, $3, $1, $2, $3]",
                'SELECTION': None,
                ### FCFC_2PT_BOX param ###
