@@ -17,7 +17,7 @@ Options: \n\
 
 if len(sys.argv) < 2 or sys.argv[1] == '-h' or sys.argv[1] == '--help':
     print(use_message)
-    exit(1)
+    exit(0)
 
 h  = 0.7
 Om = None
