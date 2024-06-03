@@ -43,15 +43,20 @@ for idx, param in enumerate(sys.argv):
 if fclass.lower() == 'bigfile':
     if ftype.lower() == 'dm':
         dataset = '1/'
-    elif ftype.lower() == 'halo':
+    elif ftype.lower() == 'halo_fof':
+        dataset = 'LL-0.200/'
+    elif ftype.lower() == 'halo_rfof':
         dataset = 'RFOF/'
     else:
-        print("Cannot recognize the dataset type. Only `dm` or `halo` (Case insensitive).")
+        print("Cannot recognize the dataset type. Only `dm` or `halo_fof` or `halo_rfof` (Case insensitive).")
         exit(1)
 
     cat = BigFileCatalog(file, dataset=dataset, header='Header')
     if not LINF or not RINF:
-        mass = cat.attrs['M0'][0]*np.array(cat['Length'])*1e10
+        if ftype.lower() == 'halo_rfof':
+            mass = cat.attrs['M0'][0]*(cat['Length']).compute()*1e10
+        elif ftype.lower() == 'halo_fof':
+            mass = cat['Mass'].compute()
         if not LINF and RINF:
             cut = (mass > minv)
         if LINF and not RINF:
@@ -60,7 +65,14 @@ if fclass.lower() == 'bigfile':
             cut = ((mass > minv) & (mass < maxv))
     else:
         cut = ...
-    np.savetxt(ofile, np.array(cat['Position'])[cut], fmt='%.3f %.3f %.3f')
+    if cat.attrs['UnitLength_in_cm'][0] - 3.08568e+21 < 1e-5:
+        cat['Position'] = cat['Position']/1e3
+    Nhalo = len(((cat['Position'])[cut]))
+    f = open(ofile, "w+", encoding="utf-8")
+    f.write(f"# Nh = {Nhalo}\n")
+    np.savetxt(ofile, ((cat['Position'])[cut]).compute(), fmt='%.3f %.3f %.3f')
+    f.close()
+
 if fclass.lower() == 'ahf':
     cat = np.loadtxt(file)
     if not LINF or not RINF:
@@ -73,4 +85,9 @@ if fclass.lower() == 'ahf':
             cut = ((mass > minv) & (mass < maxv))
     else:   
         cut = ...
+    Nhalo = len(cat[:,5:8][cut])
+    f = open(ofile, "w+", encoding="utf-8")
+    f.write(f"# Nh = {Nhalo}\n")
     np.savetxt(ofile, cat[:,5:8][cut]/1000., fmt='%.3f %.3f %.3f')
+    f.close()
+
