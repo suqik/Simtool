@@ -1,0 +1,13 @@
+nc = 64
+boxsize = 100.0
+time_step = linspace(0.01, 1, 40)
+output_redshifts = {0.3}
+Omega_m = 0.20061366241320613
+h = 0.6727
+read_powerspectrum = '/public/home/suchen/Programs/Simtool/Pipeline/cfgs/cosmo0/fastpm/Pkini.txt'
+linear_density_redshift = 0.0
+random_seed = 10410
+force_mode = "fastpm"
+pm_nc_factor = 2
+np_alloc_factor = 3
+write_snapshot = '/public/share/ace66so15x/suchen/L1000_N1024_1000cosmo/cosmo0/a'
