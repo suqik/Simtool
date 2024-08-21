@@ -2,3 +2,5 @@ c_mpi
 python
 Pipeline/param_files*
 Pipeline/results
+Pipeline/cfgs/cosmo*
+lost_files/
