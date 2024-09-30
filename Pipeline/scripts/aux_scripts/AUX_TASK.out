@@ -1,0 +1,10 @@
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+
+Computing power spectrum of the field...
+Time to complete loop = 9.28
+Time taken = 15.40 seconds
+
+Computing power spectrum of the field...
+Time to complete loop = 9.13
+Time taken = 15.12 seconds
+running time: 319 sec

@@ -1,0 +1,3004 @@
+MPI startup(): PMI server not found. Please set I_MPI_PMI_LIBRARY variable if it is not a singleton case.
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (9385 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (3711 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (10345 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (12177 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (3399 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1777 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (11153 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1389 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (10565 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (3973 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (11265 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (3525 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (9031 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1523 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (10717 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (3841 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (11269 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4009 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (16383 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (9617 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (8191 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (4095 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (2047 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Loading configurations ...
+  CONFIG_FILE     = fcfc_2pt_box.conf
+  CATALOG_LABEL   = 'D' , 'V'
+  BOX_SIZE        = 1000 , 1000 , 1000
+  DATA_STRUCT     = 0 (k-d tree)
+  BINNING_SCHEME  = 1 (s & mu)
+  PAIR_COUNT      = DV
+  CF_ESTIMATOR    = DV / @@ - 1
+  MULTIPOLE       = 0
+  OMP_NUM_THREADS = 32
+[70C[[32;1mDONE[0m]
+Initializing the correlation function calculator ...
+  15 separation bins loaded
+
+Creating a hybrid lookup table for nonlinear bins
+  Separation bins initialized successfully
+  Memory allocated for pair counts and correlation functions
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'D' ...
+  k-d tree (1048575 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Construct the tree for catalog 'V' ...
+  k-d tree (1023 nodes) constructed for the catalog
+[70C[[32;1mDONE[0m]
+Counting DV pairs ...
+[70C[[32;1mDONE[0m]
+Evaluate correlation function estimators ...
+[70C[[32;1mDONE[0m]
+Compute correlation function multipoles ...
+[70C[[32;1mDONE[0m]
+Measuring 2pcf of rlz2, redshift=0.3, SHAM0 Done.
+Saving 2pcf of rlz2, redshift=0.3, SHAM0 Done.
+running time: 1222 sec

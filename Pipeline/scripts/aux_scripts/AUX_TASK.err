@@ -1,0 +1,4 @@
+/public/home/suchen/miniconda3/envs/nbodykit-env/lib/python3.8/site-packages/bigfile/__init__.py:358: FutureWarning: Passing (type, 1) or '1type' as a synonym of type is deprecated; in a future version of numpy, it will be understood as (type, (1,)) / '(1,)type'.
+  return pyxbigfile.Dataset.__init__(self, file, dtype=dtype, size=size)
+libgcc_s.so.1 must be installed for pthread_cancel to work
+/opt/gridview/slurm/spool_slurmd/job72289561/slurm_script: line 15: 18241 Aborted                 $PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src_dev/aux/fpm_Pk_val.py

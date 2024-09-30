@@ -1,0 +1,2 @@
+/public/home/suchen/Programs/Simtool/Pipeline/src_dev/utils/runner.py:136: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if relic is "" and self.ncosmo > 1:

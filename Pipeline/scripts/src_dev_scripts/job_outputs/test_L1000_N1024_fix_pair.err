@@ -1,0 +1,17 @@
+srun: ROUTE: split_hostlist: hl=g01r4n[16,18],g02r1n[00,02,04,06,08],i12r4n[13,15,17,19],i13r1n[01,03,05,07,09] tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n06 tree_width 0
+srun: ROUTE: split_hostlist: hl=i12r4n16 tree_width 0
+srun: ROUTE: split_hostlist: hl=g02r1n07 tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n02 tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n10 tree_width 0
+srun: ROUTE: split_hostlist: hl=i12r4n18 tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n08 tree_width 0
+srun: ROUTE: split_hostlist: hl=g02r1n01 tree_width 0
+srun: ROUTE: split_hostlist: hl=g02r1n03 tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n00 tree_width 0
+srun: ROUTE: split_hostlist: hl=g01r4n19 tree_width 0
+srun: ROUTE: split_hostlist: hl=i12r4n14 tree_width 0
+srun: ROUTE: split_hostlist: hl=i13r1n04 tree_width 0
+srun: ROUTE: split_hostlist: hl=i12r4n12 tree_width 0
+srun: ROUTE: split_hostlist: hl=g01r4n17 tree_width 0
+srun: ROUTE: split_hostlist: hl=g02r1n05 tree_width 0
