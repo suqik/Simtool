@@ -2,7 +2,13 @@ c_mpi
 python
 Pipeline/param_files*
 Pipeline/results
-Pipeline/cfgs/cosmo*
-Pipeline/scripts/src_dev_scripts/job_outputs/*
-Pipeline/scripts/src_dev_scripts/*_dir/
+Pipeline/cfgs/fiducial
+Pipeline/cfgs/fix_pair
+Pipeline/cfgs/validation*
+Pipeline/scripts/src_dev_scripts/job_outputs
+Pipeline/scripts/src_dev_scripts/*dir
+Pipeline/scripts/std/job_outputs
+Pipeline/scripts/std/*dir
 lost_files/
+Pipeline/figs
+Pipeline/etc
