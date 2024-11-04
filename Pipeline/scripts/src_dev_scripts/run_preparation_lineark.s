@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH -J FPM_L1000_N1024_fixpair
+#SBATCH -J FPM_L1000_N1024_validation
 #SBATCH -p kshcnormal
 #SBATCH -N 32
 #SBATCH --ntasks-per-node=32
-#SBATCH --output=job_outputs/FPM_L1000_N1024_fixpair.out
-#SBATCH --error=job_outputs/FPM_L1000_N1024_fixpair.err
+#SBATCH --output=job_outputs/FPM_L1000_N1024_validation.out
+#SBATCH --error=job_outputs/FPM_L1000_N1024_validation.err
 
 start=`date +%s`
 module purge

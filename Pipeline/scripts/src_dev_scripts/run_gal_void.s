@@ -3,7 +3,7 @@
 #SBATCH -p kshcnormal
 #SBATCH -N 4
 #SBATCH --ntasks-per-node=32
-#SBATCH --output=job_outputs/run_GAL_VOID_L1000_N1024_validational_void.out
+#SBATCH --output=job_outputs/GAL_VOID_L1000_N1024_validation.out
 #SBATCH --error=job_outputs/GAL_VOID_L1000_N1024_validation.err
 
 module purge
