@@ -3,4 +3,6 @@ python
 Pipeline/param_files*
 Pipeline/results
 Pipeline/cfgs/cosmo*
+Pipeline/scripts/src_dev_scripts/job_outputs/*
+Pipeline/scripts/src_dev_scripts/*_dir/
 lost_files/
