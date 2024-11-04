@@ -1,9 +1,8 @@
 #!/bin/bash
 
 for ((i=1; i<10; i++)); do
-
-COSMO_START=$(( $i*100 ))
-COSMO_END=$(( ($i+1)*100 ))
+# COSMO_START=$(( $i*10 ))
+# COSMO_END=$(( ($i+1)*10 ))
 BASENAME=run_gal_power
 if [[ ! -d ${BASENAME}_dir ]]; then
     mkdir ${BASENAME}_dir
@@ -15,12 +14,12 @@ fi
 FNAME=${BASENAME}_dir/${BASENAME}_py_part$i.sh
 cat <<EOF >${FNAME}
 #!/bin/bash
-#SBATCH -J ${BASENAME}_L1000_N1024_1000cosmo_part$i
+#SBATCH -J ${BASENAME}_L1000_N1024_validation_part$i
 #SBATCH -p kshcnormal
 #SBATCH -N 1
 #SBATCH -n 32
-#SBATCH --output=job_outputs/${BASENAME}_dir/L1000_N1024_1000cosmo_part$i.out
-#SBATCH --error=job_outputs/${BASENAME}_dir/L1000_N1024_1000cosmo_part$i.err
+#SBATCH --output=job_outputs/${BASENAME}_dir/L1000_N1024_validation_part$i.out
+#SBATCH --error=job_outputs/${BASENAME}_dir/L1000_N1024_validation_part$i.err
 
 start=\`date +%s\`
 module purge
@@ -29,7 +28,7 @@ export LD_LIBRARY_PATH=/public/home/suchen/applications/CGAL-5.6.1/lib:\$LD_LIBR
 
 PYTHON=/public/home/suchen/miniconda3/envs/nbodykit-env/bin/python
 
-\$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src/run_power.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/input.ini -s $(( $i*100 )) -e $(( ($i+1)*100 )) -n 32
+\$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src/run_power.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/val_input.ini -s $(( $i*10 )) -e $(( ($i+1)*10 )) -n 32
 end=\`date +%s\`
 dif=\$[ end - start ]
 echo running time: \$dif sec

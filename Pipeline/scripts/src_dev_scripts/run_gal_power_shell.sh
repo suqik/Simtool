@@ -1,25 +1,21 @@
 #!/bin/bash
-ITE_NUM=10
-for ((i=0; i<$ITE_NUM; i++)); do
 
-BASENAME=run_gal_tpcf_val
+for ((i=1; i<10; i++)); do
+BASENAME=run_gal_power_val
 if [[ ! -d ${BASENAME}_dir ]]; then
     mkdir ${BASENAME}_dir
 fi
 if [[ ! -d job_outputs/${BASENAME}_dir ]]; then
-    mkdir -p job_outputs/${BASENAME}_dir
+    mkdir job_outputs/${BASENAME}_dir
 fi
 
-COSMO_START=$(( $i*10 ))
-COSMO_END=$(( ($i+1)*10 ))
-
-FNAME=${BASENAME}_dir/${BASENAME}_py_part$i.s
+FNAME=${BASENAME}_dir/${BASENAME}_py_part$i.sh
 cat <<EOF >${FNAME}
 #!/bin/bash
 #SBATCH -J ${BASENAME}_L1000_N1024_part$i
 #SBATCH -p kshcnormal
 #SBATCH -N 1
-#SBATCH --ntasks-per-node=32
+#SBATCH -n 32
 #SBATCH --output=job_outputs/${BASENAME}_dir/L1000_N1024_part$i.out
 #SBATCH --error=job_outputs/${BASENAME}_dir/L1000_N1024_part$i.err
 
@@ -30,7 +26,7 @@ export LD_LIBRARY_PATH=/public/home/suchen/applications/CGAL-5.6.1/lib:\$LD_LIBR
 
 PYTHON=/public/home/suchen/miniconda3/envs/nbodykit-env/bin/python
 
-\$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src_dev/run_tpcf.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/val_input.ini -s $COSMO_START -e $COSMO_END
+\$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src_dev/run_power.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/val_input.ini -s $(( $i*10 )) -e $(( ($i+1)*10 )) -n 32
 end=\`date +%s\`
 dif=\$[ end - start ]
 echo running time: \$dif sec

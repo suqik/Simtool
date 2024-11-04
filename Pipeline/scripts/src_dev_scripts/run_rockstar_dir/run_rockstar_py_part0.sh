@@ -12,7 +12,7 @@ module load compiler/devtoolset/7.3.1 compiler/intel/2021.3.0 mpi/intelmpi/2021.
 
 PYTHON=/public/home/suchen/miniconda3/envs/nbodykit-env/bin/python
 
-$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src_dev/run_rockstar.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/val_input.ini -s 10 -e 11
+$PYTHON /public/home/suchen/Programs/Simtool/Pipeline/src_dev/run_rockstar.py /public/home/suchen/Programs/Simtool/Pipeline/cfgs/val_input.ini -s 0 -e 10
 end=`date +%s`
 dif=$[ end - start ]
 echo running time: $dif sec

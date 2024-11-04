@@ -1,11 +1,11 @@
 #!/bin/bash
 
-for ((i=9; i<10; i++)); do
+for ((i=0; i<10; i++)); do
 
-COSMO_START=$i
-COSMO_END=100
-# COSMO_START=$(( $i*100 ))
-# COSMO_END=$(( ($i+1)*100 ))
+# COSMO_START=81
+# COSMO_END=87
+COSMO_START=$(( $i*10 ))
+COSMO_END=$(( ($i+1)*10 ))
 if [[ ! -d run_rockstar_dir ]]; then
     mkdir run_rockstar_dir
 fi
