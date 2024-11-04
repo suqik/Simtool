@@ -70,7 +70,9 @@ def mk_fastpm_conf(conf, icosmo, Om0, hubble, pkpath, output, relic="", lineark=
         fpm_params["read_powerspectrum"] = repr(pkpath)
         fpm_params["random_seed"] = fpm_seed
         if "IFFIX" in conf["FastPM"]:
-            fpm_params["remove_cosmic_variance"]
+            fpm_params["remove_cosmic_variance"] = conf["FastPM"].getboolean("IFFIX")
+        if "IFINV" in conf["FastPM"]:
+            fpm_params["inverted_ic"] = conf["FastPM"].getboolean("IFINV")
 
     snappath = snapdir+snapbase+f"{relic}/a"
     fpm_params["write_snapshot"] = repr(snappath)
@@ -83,6 +85,8 @@ def mk_fastpm_conf(conf, icosmo, Om0, hubble, pkpath, output, relic="", lineark=
         if fpm_params[key] is not None:
             if key == 'hubble':
                 f.write(f"h = {fpm_params[key]}\n")
+            elif key == 'remove_cosmic_variance' or key == 'inverted_ic':
+                f.write(f"{key} = {str(fpm_params[key]).lower()}\n")
             else:
                 f.write(f"{key} = {fpm_params[key]}\n")
 

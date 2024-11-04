@@ -12,7 +12,14 @@ conf_file = args.conf
 runner = TPCF_Runner()
 runner.load_config_file(conf_file)
 
-runner.set_params()
+### run rlzs
+runner.set_params(
+    ncosmo = 1, 
+    nsham_per_cosmo = 1, 
+    nrlzs_per_sham = 10, 
+    snapdir = "/public/share/ace66so15x/suchen/L1000_N1024_rlzs/", 
+    snapbase = "rlz"
+)
 
 runner.declare()
 start = int(args.start)

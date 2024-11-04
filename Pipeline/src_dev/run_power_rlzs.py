@@ -13,8 +13,13 @@ args = parser.parse_args()
 conf_file = args.conf
 runner = POWER_Runner()
 runner.load_config_file(conf_file=conf_file)
-
-runner.set_params()
+runner.set_params(
+    outputbase = "/public/home/suchen/Programs/Simtool/Pipeline/results/Gpower_rlzs/", 
+    snapdir = "/public/share/ace66so15x/suchen/L1000_N1024_rlzs/", 
+    snapbase = "rlz", 
+    nsham_per_cosmo = 1,
+    nrlzs_per_sham = 10,
+)
 
 runner.declare()
 

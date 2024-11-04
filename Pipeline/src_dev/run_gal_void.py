@@ -22,8 +22,8 @@ runner.load_config_file(conf)
 
 runner.set_params()
 
-tmp = np.loadtxt("/public/home/suchen/Programs/Simtool/Pipeline/cfgs/validation/SHAM_tot_list.txt")
+tmp = np.loadtxt("/public/home/suchen/Programs/Simtool/Pipeline/cfgs/validation_fid_gp/SHAM_tot_list.txt")
 SHAM_param_list = np.array([tmp[rank]])
-if rank == 50:
-    print(f"cosmo50 has input SHAM parameter of {tmp[rank]}", flush=True)
+# if rank == 50:
+#     print(f"cosmo50 has input SHAM parameter of {tmp[rank]}", flush=True)
 runner.run(SHAM_param_list=SHAM_param_list, snapname_relic=f"{rank}", seed2=1234)

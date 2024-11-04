@@ -2,12 +2,6 @@ import numpy as np
 from pyfcfc.boxes import py_compute_cf
 from pyfcfc.utils import add_pair_counts
 
-def get_indices(cat, length, nside):
-    indices_3d = cat // length
-    indices_1d = indices_3d[:,0] + nside*(indices_3d[:,1] + nside*indices_3d[:,2])
-    
-    return indices_1d
-
 def get_auto_wp(data, boxsize, bins_info, pyfcfc_conf, rand=None, seed=None, wdat=None, wran=None):
     dtype = data.dtype
     dsize = len(data)

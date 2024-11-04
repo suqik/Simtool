@@ -14,9 +14,3 @@ runner.load_config_file(conf_file)
 runner.set_params()
 
 runner.run(nCPUs=args.nCPUs, snapname_relic="", iteration=False)
-
-# if args.idx < 0:
-#     print("Will automatically run ncosmo simulations given by configuration file.")
-#     runner.run(nCPUs=args.nCPUs, iteration=True)
-# else:
-#     runner.run(nCPUs=args.nCPUs, snapname_relic=f"{args.idx}", iteration=False)
