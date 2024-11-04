@@ -78,7 +78,7 @@ def get_cross_iso(cat1, cat2, boxsize,
                             box=boxsize, 
                             multipole = [0], # Multipoles to compute
                             cf = ['DV / @@ - 1'], # CF estimator (not necessary if only pair counts are required)
-                            verbose = 'F'
+                            verbose = 'T'
                             ) 
     
     return results

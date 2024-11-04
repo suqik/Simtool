@@ -36,7 +36,12 @@ multipoles = list(map(int, conf.get("POWER", "multipoles").split(", ")))
 outputbase = conf.get("POWER", "outputbase").strip("\"")
 
 ### input file
-ncosmo = conf["General"].getint("ncosmo")
+if "input" in conf["General"]:
+    cfgbase = conf.get("General", "cfgbase").strip("\"")
+    cosmo_list_file = conf.get("General", "input").strip("\"")
+    ncosmo = len(np.loadtxt(cfgbase+cosmo_list_file))
+else:
+    ncosmo = conf["General"].getint("ncosmo")
 nsham_per_cosmo = conf["SHAM"].getint("ncats")
 nrlzs_per_sham = conf["SHAM"].getint("nrlzs")
 boxsize = conf["FastPM"].getfloat("boxsize")
@@ -75,6 +80,4 @@ for icosmo in range(args.start, args.end):
                 f.write(f"Pk{ell} ")
             f.write("\n")
             np.savetxt(f, np.c_[kout, Pkout_mean.T])
-            # np.savetxt(f, Pkout_mean)
             f.close()
-                

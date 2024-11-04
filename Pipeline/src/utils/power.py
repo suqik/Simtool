@@ -12,6 +12,22 @@ def cat2mesh(pos, Nmesh, boxsize, MAS="CIC"):
 
     return delta
 
+def mk_mesh_cat(pos, Nmesh, boxsize, MAS="NGP"):
+    delta = np.zeros((Nmesh, Nmesh, Nmesh), dtype=np.float32)
+    pos = pos.astype(np.float32)
+
+    MASL.MA(pos, delta, boxsize, MAS)
+    del pos
+    dr = boxsize/float(Nmesh)
+    mesh_pos = np.linspace(dr/2., boxsize-dr/2., Nmesh)
+    mesh_x, mesh_y, mesh_z = np.meshgrid(mesh_pos, mesh_pos, mesh_pos, indexing="ij")
+
+    grid_non_zero = (delta != 0)
+    mesh_cat_pos = np.c_[mesh_x[grid_non_zero], mesh_y[grid_non_zero], mesh_z[grid_non_zero]]
+    mesh_cat_weight = delta[grid_non_zero]
+
+    return mesh_cat_pos, mesh_cat_weight
+
 def get_powerspec_cat(pos, Nmesh, boxsize, MAS="CIC", kmin=None, kmax=None, nk=None, multipoles=[0], threads=None):
     delta = cat2mesh(pos, Nmesh, boxsize, MAS)
     Pk = PKL.Pk(delta, boxsize, axis=0, MAS=MAS, threads=threads)
