@@ -11,7 +11,6 @@
 import bigfile
 import os
 import numpy
-from multiprocessing import Pool, cpu_count
 
 DefaultHeaderDtype = [
         ('Npart', ('u4', 6)),
@@ -98,33 +97,30 @@ def Convert(input, output, Nfile, precision):
 def exec_convert(basename, baseheader, ds, Nfile, precision):
 
     print('total number of dm particles', ds.size)
-    with Pool(cpu_count()) as pool:
-        for i in range(Nfile):
-            pool.apply_async(__exec_convert_sep, args=(basename, baseheader, ds, Nfile, precision, i))
 
-def __exec_convert_sep(basename, baseheader, ds, Nfile, precision, i):
     baseheader['NumFiles'] = Nfile
     a = baseheader['Time']
 
-    print('working on file %d/%d' % (i, Nfile))
+    for i in range(Nfile):
+        print('working on file %d/%d' % (i, Nfile))
 
-    start = i * ds.size // Nfile
-    end = (i + 1) * ds.size // Nfile
+        start = i * ds.size // Nfile
+        end = (i + 1) * ds.size // Nfile
 
-    # read
-    data = ds[start:end]
-    pos = data['Position'] #Mpc/h
-    pos = numpy.array(pos, dtype=precision)
+        # read
+        data = ds[start:end]
+        pos = data['Position'] #Mpc/h
+        pos = numpy.array(pos, dtype=precision)
 
-    # convert to gadget 1 units from pecuiliar velocity
-    # FIXME: check if this is right.
-    vel = data['Velocity'] * a ** -0.5
-    vel = numpy.array(vel, dtype=precision)
-    id = data['ID']
+        # convert to gadget 1 units from pecuiliar velocity
+        # FIXME: check if this is right.
+        vel = data['Velocity'] * a ** -0.5
+        vel = numpy.array(vel, dtype=precision)
+        id = data['ID']
 
-    filename = '%s.%d' % (basename, i)
+        filename = '%s.%d' % (basename, i)
 
-    header = baseheader.copy()
-    header['Npart'][1] = end - start
-    print("header", header)
-    write_gadget_1_ic(filename, header, pos, vel, id)
+        header = baseheader.copy()
+        header['Npart'][1] = end - start
+        print("header", header)
+        write_gadget_1_ic(filename, header, pos, vel, id)
