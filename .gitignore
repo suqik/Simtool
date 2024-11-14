@@ -12,3 +12,4 @@ Pipeline/scripts/std/*dir
 lost_files/
 Pipeline/figs
 Pipeline/etc
+Pipeline/tests
