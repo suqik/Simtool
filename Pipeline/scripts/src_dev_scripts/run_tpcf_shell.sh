@@ -1,8 +1,8 @@
 #!/bin/bash
 ITE_NUM=10
-for ((i=0; i<$ITE_NUM; i++)); do
+for ((i=2; i<$ITE_NUM; i++)); do
 
-BASENAME=run_gal_tpcf_val
+BASENAME=run_void_tpcf_val
 if [[ ! -d ${BASENAME}_dir ]]; then
     mkdir ${BASENAME}_dir
 fi
