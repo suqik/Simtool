@@ -17,7 +17,7 @@ runner.set_params(
     ncosmo = 1, 
     nsham_per_cosmo = 1, 
     nrlzs_per_sham = 10, 
-    snapdir = "/public/share/ace66so15x/suchen/L1000_N1024_rlzs/", 
+    snapdir = "/public/share/ace66so15x/suchen/Realizations/L1000_N1024_rlzs/", 
     snapbase = "rlz"
 )
 

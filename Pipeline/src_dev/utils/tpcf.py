@@ -41,6 +41,43 @@ def get_auto_wp(data, boxsize, bins_info, pyfcfc_conf, rand=None, seed=None, wda
 
     return results
 
+def get_auto_iso(data, rand, boxsize, bins_info, wdat=None, wran=None):
+    dtype = data.dtype
+
+    nbins = bins_info['nbins']    
+    min_sep = bins_info['min_sep']
+    max_sep = bins_info['max_sep']
+
+    if wdat is None:
+        wdat = np.ones(len(data)).astype(dtype)
+    if wran is None:
+        wran = np.ones(len(rand)).astype(dtype)
+
+    cat_list = [data, rand]
+    w_list = [wdat, wran]
+    label = ['D', 'R']
+    pair = ['DD', 'DR', 'RR']
+    cf = ["(DD - 2*DR + RR)/RR"]
+
+    results = py_compute_cf(cat_list, w_list, 
+                            10**(np.linspace(np.log10(min_sep), np.log10(max_sep), nbins)), 
+                            None, 
+                            100, 
+                            label = label, # Catalog labels matching the number of catalogs provided
+                            bin=1, # bin type for multipoles
+                            pair = pair, # Desired pair counts
+                            box=boxsize, 
+                            multipole = [0], # Multipoles to compute
+                            cf = cf, # CF estimator (not necessary if only pair counts are required)
+                            verbose = 'T'
+                            )
+
+    return results
+
+# def get_stacked_vauto(void, boxsize, Rmins, Rmaxs, Rv_col=-1, rvoid=None, wvoid=None,
+#                       min_sep_inRv = 0.1, max_sep_inRv=3, nbins=15):
+    
+
 def get_cross_iso(cat1, cat2, boxsize,
                   rand1=None, rand2=None,
                   wcat1=None, wcat2=None, 
@@ -111,18 +148,6 @@ def get_cross_iso(cat1, cat2, boxsize,
                             cf = cf, # CF estimator (not necessary if only pair counts are required)
                             verbose = 'T'
                             ) 
-    # results = py_compute_cf([cat1, cat2], [wcat1, wcat2], 
-    #                         10**(np.linspace(np.log10(min_sep), np.log10(max_sep), nbins)), 
-    #                         None, 
-    #                         100, 
-    #                         label = ['D', 'V'], # Catalog labels matching the number of catalogs provided
-    #                         bin=1, # bin type for multipoles
-    #                         pair = ['DV'], # Desired pair counts
-    #                         box=boxsize, 
-    #                         multipole = [0], # Multipoles to compute
-    #                         cf = ['DV / @@ - 1'], # CF estimator (not necessary if only pair counts are required)
-    #                         verbose = 'T'
-    #                         ) 
     
     return results
 

@@ -18,5 +18,7 @@ runner.set_params()
 
 runner.declare()
 
-for irlz in range(int(args.start), int(args.end)):
-    runner.run(relic=f"{irlz}")
+# runner.run(nthreads=32)
+
+for idx in range(int(args.start), int(args.end)):
+    runner.run(snapname_relic=f"{idx}", nthreads=args.nthreads)

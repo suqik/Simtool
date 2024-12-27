@@ -10,4 +10,5 @@ conf_file = args.conf
 runner = PREPARE_Runner()
 runner.load_config_file(conf_file)
 runner.set_params()
-runner.run()
+for irlz in range(10,100):
+    runner.run(relic=f"{irlz}", seed_offset=irlz)

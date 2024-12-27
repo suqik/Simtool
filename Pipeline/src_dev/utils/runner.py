@@ -123,7 +123,7 @@ class PREPARE_Runner(Base_Runner):
         ### TODO: write declare
         print("Beginning preparing necessary configuration files.", flush=True)
         if self.FROMFILE:
-            print(f"Load cosmological parameters from file {self.cosmo_file}", flush=True)
+            print(f"Load cosmological parameters from file {self.input}", flush=True)
             print("Fixed parameters: {}".format(" ".join([f"{self.fix_cosmo_names[i]}={self.fix_cosmo_vals[i]:.4f}" for i in range(len(self.fix_cosmo_names))])), flush=True)
             print(f"Varied parameters: {self.param_names}", flush=True)
         else:
@@ -133,20 +133,19 @@ class PREPARE_Runner(Base_Runner):
 
         print(f"fix_seed: {self.fix_seed}")
 
-    def run(self, relic=""):
+    def run(self, snapname_relic="", seed_offset=None):
         vary_dict = self.get_cosmo_params()
-        relic_input = str(relic)
+        snapname_relic_input = str(snapname_relic)
 
         param_dict = {}
         for i in range(len(self.fix_cosmo_names)):
             param_dict[self.fix_cosmo_names[i]] = self.fix_cosmo_vals[i]
 
         for icosmo in range(self.ncosmo):
-            if relic_input == "" and self.ncosmo > 1:
-                relic = f"{icosmo}"
-            # print(relic)
+            if snapname_relic_input == "" and self.ncosmo > 1:
+                snapname_relic = f"{icosmo}"
             ### Generate FastPM configuration file ###
-            fpm_cfgpath = self.cfgbase+self.cfgsubbase+f"{relic}/fastpm/"
+            fpm_cfgpath = self.cfgbase+self.cfgsubbase+f"{snapname_relic}/fastpm/"
             if not os.path.isdir(fpm_cfgpath):
                 os.makedirs(fpm_cfgpath)
 
@@ -164,14 +163,17 @@ class PREPARE_Runner(Base_Runner):
 
             mk_ini_Pk(hubble, Om0, Ob0, ns, sigma8, fpm_cfgpath+"Pkini.txt")
 
-            # write fastpm conf    
-            if self.fix_seed:        
-                mk_fastpm_conf(self.conf, 0, Om0, hubble, fpm_cfgpath+"Pkini.txt", fpm_cfgpath+"fpm.lua", relic=relic)
+            # write fastpm conf
+            if seed_offset is not None:
+                mk_fastpm_conf(self.conf, seed_offset, Om0, hubble, fpm_cfgpath+"Pkini.txt", fpm_cfgpath+"fpm.lua", snapname_relic=snapname_relic)
             else:
-                mk_fastpm_conf(self.conf, icosmo, Om0, hubble, fpm_cfgpath+"Pkini.txt", fpm_cfgpath+"fpm.lua", relic=relic)
+                if self.fix_seed:        
+                    mk_fastpm_conf(self.conf, 0, Om0, hubble, fpm_cfgpath+"Pkini.txt", fpm_cfgpath+"fpm.lua", snapname_relic=snapname_relic)
+                else:
+                    mk_fastpm_conf(self.conf, icosmo, Om0, hubble, fpm_cfgpath+"Pkini.txt", fpm_cfgpath+"fpm.lua", snapname_relic=snapname_relic)
 
             if self.ROCKSTAR:
-                rstar_cfgpath = self.cfgbase+self.cfgsubbase+f"{relic}/rockstar/"
+                rstar_cfgpath = self.cfgbase+self.cfgsubbase+f"{snapname_relic}/rockstar/"
                 if not os.path.isdir(rstar_cfgpath):
                     os.makedirs(rstar_cfgpath)
                 redshifts = list(map(float, self.conf.get("FastPM", "redshifts").split(", ")))
@@ -181,7 +183,7 @@ class PREPARE_Runner(Base_Runner):
                                     cvt_nfile=self.cvt_nfile, 
                                     filename=self.cvt_opbase.split("/")[1]+"{:03d}.<block>".format(idx), 
                                     output=rstar_cfgpath+"z{:.2f}.cfg".format(zi), 
-                                    relic=relic, 
+                                    snapname_relic=snapname_relic, 
                                     redshift=zi)
             
 class FASTPM_Runner(Base_Runner):
@@ -555,21 +557,6 @@ class TPCF_Runner(Base_Runner):
                     dm, dm_ran = self.load_dm_catalog(snappath)
                 else:
                     dm = self.load_dm_catalog(snappath)
-            # tmp = BigFileCatalog(snappath, dataset="1/", header="Header")
-            # data_size = tmp.csize
-            # dm = tmp['Position'].compute()
-
-            # # if apply downsampling
-            # if self.DOWN_SAMPLE:
-            #     random.seed(0)
-            #     sample_idx = random.sample(list(np.arange(data_size)), int(self.dsample_rate*data_size))
-            #     dm = dm[sample_idx]
-            # del tmp
-
-            # # if estimate jk_err, generate DM random catalog
-            # if self.JK:
-            #     np.random.seed(0)
-            #     dm_ran = np.random.rand(len(dm)*10, 3)*self.boxsize
 
             for isham in np.arange(self.nsham_per_cosmo):
                 outputpath = self.outputbase+self.snapbase+"{}/a_{:.4f}/SHAM{:d}/".format(snapname_relic,1./(1.+zi),isham)
@@ -688,8 +675,17 @@ class POWER_Runner(Base_Runner):
 
     def set_params(self, **kwargs):
         ### power spectrum info
+        self.cat = self.conf.get("POWER", "cat1").strip("\"")
+        if self.cat != "gal" and self.cat != "void" and self.cat != "matter":
+            raise NotImplementedError(f"Measuring {self.cat} power spectrum is not implemented! Only support `matter`, `gal` and `void`.")
+        
         self.Nmesh = self.conf["POWER"].getint("Nmesh") # position to grid
         self.MAS = self.conf.get("POWER", "MAS") # Mass Alignment Scheme
+
+        if self.cat == "void":
+            self.Rmin = self.conf["POWER"].getfloat("RVmin")
+            self.Rmax = self.conf["POWER"].getfloat("RVmax")
+            self.dRV  = self.conf["POWER"].getfloat("dRV")
 
         self.kmin = self.conf["POWER"].getfloat("min_k")
         self.kmax = self.conf["POWER"].getfloat("max_k")
@@ -728,7 +724,8 @@ class POWER_Runner(Base_Runner):
 
     def declare(self):
         print("="*100+"\n")
-        print("Begin measuring two point correlation function ...\n")
+        print("Begin measuring power spectrum ...\n")
+        print(f"power spectrum type: {self.cat} power spectrum\n")
         print("k separation bins:")
         print("kmin: {:.2f} kmax: {:.2f} nbins: {:d}\n".format(self.kmin, self.kmax, self.nk))
         print("Catalog info:")
@@ -745,37 +742,57 @@ class POWER_Runner(Base_Runner):
         
         return None
 
-    def run(self, relic="", nthreads=1):
+    def run(self, snapname_relic="", nthreads=1):
         for zi in self.redshifts:
-            snappath = self.snapdir + self.snapbase + "{:s}/a_{:.4f}/".format(relic, 1./(1.+zi))
-            for isham in range(self.nsham_per_cosmo):
-                outputpath = self.outputbase+self.snapbase+"{:s}/a_{:.4f}/SHAM{:d}/".format(relic,1./(1.+zi),isham)
+            snappath = self.snapdir + self.snapbase + "{:s}/a_{:.4f}/".format(snapname_relic, 1./(1.+zi))
+            if self.cat == "matter":
+                outputpath = self.outputbase+self.snapbase+"{:s}/a_{:.4f}/".format(snapname_relic,1./(1.+zi))
                 if not os.path.isdir(outputpath):
                     os.makedirs(outputpath)
-
-                Pkout_mean = []
-                for irlz in range(self.nrlzs_per_sham):
-                    galpath = snappath+self.halobase+self.shambase+f"{isham}/gal_{self.feature}_rlz{irlz}.txt"
-                    gal = np.loadtxt(galpath)
-
-                    kout, Pkout = get_powerspec_cat(gal, self.Nmesh, self.boxsize, self.MAS, self.kmin, self.kmax, self.nk, self.multipoles, nthreads)
-                    fname_irlz = outputpath+f"power_rlz{irlz}.txt"
-                    header_irlz = "# k (h/Mpc) " + " ".join([f"Pk{ell}" for ell in range(3)])
-                    data_irlz = np.c_[kout, np.asarray(Pkout).T]
-                    self.write_to_file(fname_irlz, header_irlz, data_irlz)
                     
-                    Pkout_mean.append(Pkout)
-                Pkout_mean = np.mean(np.asarray(Pkout_mean), axis=0)
-
+                cat = BigFileCatalog(snappath, dataset="1/", header="Header")
+                kout, Pkout = get_powerspec_bigfile(cat, self.Nmesh, self.MAS, self.kmin, self.kmax, self.nk, self.multipoles, nthreads)
                 fname = outputpath+f"power.txt"
                 header = "# k (h/Mpc) " + " ".join([f"Pk{ell}" for ell in range(3)])
-                data = np.c_[kout, Pkout_mean.T]
+                data = np.c_[kout, np.asarray(Pkout).T]
                 self.write_to_file(fname, header, data)
 
-                # f = open(outputpath+f"power.txt", "w+")
-                # f.write("# k (h/Mpc) ")
-                # for ell in self.multipoles:
-                #     f.write(f"Pk{ell} ")
-                # f.write("\n")
-                # np.savetxt(f, np.c_[kout, Pkout_mean.T])
-                # f.close()
+            else:
+                for isham in range(self.nsham_per_cosmo):
+                    outputpath = self.outputbase+self.snapbase+"{:s}/a_{:.4f}/SHAM{:d}/".format(snapname_relic,1./(1.+zi),isham)
+                    if not os.path.isdir(outputpath):
+                        os.makedirs(outputpath)
+
+                    Pkout_mean = []
+                    for irlz in range(self.nrlzs_per_sham):
+                        if self.cat == "gal":
+                            catpath = snappath+self.halobase+self.shambase+f"{isham}/gal_{self.feature}_rlz{irlz}.txt"
+                            catalog = np.loadtxt(catpath)
+                        if self.cat == "void":
+                            catpath = snappath+self.halobase+self.shambase+f"{isham}/void_{self.feature}_rlz{irlz}.txt"
+                            catalog = np.loadtxt(catpath)
+                            vcut = (catalog[:,-1] > self.Rmin) & (catalog[:,-1] < self.Rmax)
+                            catalog = catalog[vcut]
+                            catalog = catalog[:,:-1]
+
+                        kout, Pkout = get_powerspec_cat(catalog, self.Nmesh, self.boxsize, self.MAS, self.kmin, self.kmax, self.nk, self.multipoles, nthreads)
+                        fname_irlz = outputpath+f"power_rlz{irlz}.txt"
+                        header_irlz = "# k (h/Mpc) " + " ".join([f"Pk{ell}" for ell in range(3)])
+                        data_irlz = np.c_[kout, np.asarray(Pkout).T]
+                        self.write_to_file(fname_irlz, header_irlz, data_irlz)
+                        
+                        Pkout_mean.append(Pkout)
+                    Pkout_mean = np.mean(np.asarray(Pkout_mean), axis=0)
+
+                    fname = outputpath+f"power.txt"
+                    header = "# k (h/Mpc) " + " ".join([f"Pk{ell}" for ell in range(3)])
+                    data = np.c_[kout, Pkout_mean.T]
+                    self.write_to_file(fname, header, data)
+
+                    # f = open(outputpath+f"power.txt", "w+")
+                    # f.write("# k (h/Mpc) ")
+                    # for ell in self.multipoles:
+                    #     f.write(f"Pk{ell} ")
+                    # f.write("\n")
+                    # np.savetxt(f, np.c_[kout, Pkout_mean.T])
+                    # f.close()
