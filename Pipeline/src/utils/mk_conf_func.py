@@ -4,7 +4,7 @@ import numpy as np
 from nbodykit.cosmology import LinearPower, Cosmology
 from .cfg_params import fastpm_default, rockstar_default
 
-def get_conf_list(conf, section, key, type, sep=", "):
+def conf_get_list(conf, section, key, type, sep=", "):
     return list(map(type, conf.get(section, key).split(sep)))
 
 def get_cosmo_params(conf):
@@ -21,8 +21,8 @@ def get_cosmo_params(conf):
             return NotImplementedError
         else:
             ### load fixed params
-            fix_cosmo_names = get_conf_list(conf, "General", "fix_cosmo_names", str, ", ")
-            fix_cosmo_vals = get_conf_list(conf, "General", "fix_cosmo_vals", float, ", ")
+            fix_cosmo_names = conf_get_list(conf, "General", "fix_cosmo_names", str, ", ")
+            fix_cosmo_vals = conf_get_list(conf, "General", "fix_cosmo_vals", float, ", ")
 
             cosmo_param_dict["fix"] = {}
             for i in range(n_fix_params):
@@ -30,9 +30,9 @@ def get_cosmo_params(conf):
             
             ### load varied params
             n_vari_params = conf["General"].getint("n_vari_params")
-            vari_cosmo_names = get_conf_list(conf, "General", "vari_cosmo_names", str, ", ")
-            prior_low = get_conf_list(conf, "General", "prior_low", float, ", ")
-            prior_up = get_conf_list(conf, "General", "prior_up", float, ", ")
+            vari_cosmo_names = conf_get_list(conf, "General", "vari_cosmo_names", str, ", ")
+            prior_low = conf_get_list(conf, "General", "prior_low", float, ", ")
+            prior_up = conf_get_list(conf, "General", "prior_up", float, ", ")
             seed = conf["General"].getint("seed")
             ncosmo = conf["General"].getint("ncosmo")
             cosmo_param_rng = np.random.default_rng(seed=seed)
@@ -45,12 +45,12 @@ def get_cosmo_params(conf):
             ### save parameters
             cfgbase = str(conf.get("General", "cfgbase")).strip("\"")
             output = str(conf.get("General", "output")).strip("\"")
-            f = open(cfgbase+output, "w+", encoding="utf-8")
+            f = open(os.path.join(cfgbase,output), "w+", encoding="utf-8")
             f.write("# {}\n".format(" ".join(vari_cosmo_names)))
             np.savetxt(f, vari_cosmo_vals, fmt="%3f %3f")
             f.close()
 
-            return cosmo_param_dict
+            return cosmo_param_dict, ncosmo
 
 def mk_ini_Pk(cosmo_dict_input:dict, output):
     if "sigma8" not in cosmo_dict_input.keys() and "S8" in cosmo_dict_input.keys():
@@ -77,8 +77,7 @@ def mk_fastpm_conf(conf, seed, cosmo_dict_input:dict, snappath, pkpath, output):
     fpm_params["boxsize"] = conf["FastPM"].getfloat("boxsize")
     fpm_params["nc"] = conf["FastPM"].getint("npart")
     fpm_params["time_step"] = str(conf.get("FastPM", "time_step")).strip("\"")
-    # redshifts = list(map(str, conf.get("FastPM", "redshifts").split(", ")))
-    redshifts = get_conf_list(conf, "FastPM", "redshifts", float, sep=", ")
+    redshifts = conf_get_list(conf, "FastPM", "redshifts", str, sep=", ")
     fpm_params["output_redshifts"] = "{{{}}}".format(" ".join(redshifts))
 
     ### FPM varied params
@@ -121,25 +120,13 @@ def mk_fastpm_conf(conf, seed, cosmo_dict_input:dict, snappath, pkpath, output):
 
 def mk_rockstar_conf(conf, snappath, cvt_opbase, cvt_nfile, filename, output, scale_factor=None, redshift=None):
     rstar_params = rockstar_default.copy()
-    if scale_factor is None and redshift is None:
-        print("Must input scale factor OR redshift of snapshot!")
-        exit()
-    elif scale_factor is not None and redshift is not None:
-        if np.abs((1./(1+redshift))-scale_factor) > 1e-5:
-            print("Input redshift and scale factor do not match! Use redshift.")
-            scale_factor = 1./(1+redshift)
-    elif scale_factor is None:
-        scale_factor = 1./(1+redshift)
 
     op_base = conf.get("ROCKSTAR", "outputbase").strip("\"")
-    # snapdir = str(conf.get("FastPM", "snapdir")).strip("\"")
-    # snapbase = str(conf.get("FastPM", "snapbase")).strip("\"")
-    # snappath = snapdir+snapbase+"{:d}/a_{:.4f}/".format(icosmo, scale_factor)
     rstar_params["FORCE_RES"]    = conf["ROCKSTAR"].getfloat("force_res")
     rstar_params["PARALLEL_IO"]  = conf["ROCKSTAR"].getint("parallel")
     rstar_params["FILENAME"]     = repr(filename)
-    rstar_params["INBASE"]       = repr(snappath+cvt_opbase)
-    rstar_params["OUTBASE"]      = repr(snappath+op_base)
+    rstar_params["INBASE"]       = repr(os.path.join(snappath,cvt_opbase))
+    rstar_params["OUTBASE"]      = repr(os.path.join(snappath,op_base))
 
     if rstar_params["PARALLEL_IO"]:
         rstar_params["NUM_BLOCKS"] = cvt_nfile
