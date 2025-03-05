@@ -1,63 +1,68 @@
-import os, sys
+import os
+import argparse
 import configparser
-import time
-from utils.convert import Convert
+from utils.mk_conf_func import conf_get_list
+from utils.io_func import *
+from core.convert import Convert
+from core.drivers import rockstar_driver
 
-if len(sys.argv) != 2:
-    print("Usage: python run_rockstar.py pipeline_conf")
-    exit()
+argpar = argparse.ArgumentParser()
+argpar.add_argument("-c", "--conf", help="Pipeline config", type=str)
+argpar.add_argument("-cs", "--cosmo_start", help="Staring label of cosmology", type=int, default=0)
+argpar.add_argument("-ce", "--cosmo_end", help="Ending label of cosmology, minus means running all", type=int, default=-1)
+argpar.add_argument("-rs", "--rlz_start", help="Staring label of realization", type=int, default=0)
+argpar.add_argument("-re", "--rlz_end", help="Ending label of realization, minus means running all", type=int, default=-1)
 
-conf_name = sys.argv[1]
+args = argpar.parse_args()
+
+args = argpar.parse_args()
 conf = configparser.ConfigParser()
-conf.read(conf_name)
+conf.read(args.conf)
 
 ### Convert params
 nfile = conf["Convert"].getint("nfile")
 precision = conf.get("Convert", "precision").strip("\"")
-gadgetbase = conf.get("Convert", "outputbase").strip("\"")
+# gadgetbase = conf.get("Convert", "outputbase").strip("\"")
 
-### Input & output
-ipdir = conf.get("FastPM", "snapdir").strip("\"")
-ipbase = conf.get("FastPM", "snapbase").strip("\"")
-redshifts = list(map(float, conf.get("FastPM", "redshifts").split(", ")))
+### Snapshot path
+# snapdir = conf.get("FastPM", "snapdir").strip("\"")
+# snapbase = conf.get("FastPM", "snapbase").strip("\"")
+ncosmo = conf["General"].getint("ncosmo")
+nrlzs_per_cosmo = conf["FastPM"].getint("nrlzs")
+redshifts = conf_get_list(conf, "FastPM", "redshifts", float, sep=", ")
 
 ### Rockstar part
-boxsize = conf["FastPM"].getfloat("boxsize")
-base = conf.get("General","cfgbase").strip("\"")
-subbase = conf.get("General","cfgsubbase").strip("\"")
-ncosmo = conf["General"].getint("ncosmo")
-rstaropbase = conf.get("ROCKSTAR", "outputbase").strip("\"")
+# cfgbase = conf.get("General","cfgbase").strip("\"")
+# cfgsubbase = conf.get("General","cfgsubbase").strip("\"")
+# halobase = conf.get("ROCKSTAR", "outputbase").strip("\"")
 
 Rockstar_exec = "/public/home/suchen/applications/rockstar/rockstar"
 FindPAR_exec = "/public/home/suchen/applications/rockstar/util/find_parents"
 
 os.environ["OMP_NUM_THREADS"] = "1"
-for icosmo in range(1):
-    ### convert bigfile catalog to gadget
-    for idx, zi in enumerate(redshifts):
-        snappath = ipdir+ipbase+"{:d}/a_{:.4f}/".format(icosmo, 1./(1+zi))
-        gadgetpath = snappath+gadgetbase+"{:03d}".format(idx)
 
-        ### execute convert
-        Convert(snappath, gadgetpath, nfile, precision)
+cosmo_start, cosmo_end = get_start_end(conf, args, "cosmo")
+rlz_start, rlz_end = get_start_end(conf, args, "crlz")
 
-        ### run rockstar
-        rstar_cfgpath = base+subbase+"{:d}/rockstar/z{:.2f}.cfg".format(icosmo, zi)
-        if not os.path.isdir(snappath+rstaropbase):
-            os.mkdir(snappath+rstaropbase)
+for icosmo in range(cosmo_start, cosmo_end):
+    for irlz in range(rlz_start, rlz_end):
+        ### convert bigfile catalog to gadget
+        for idx, zi in enumerate(redshifts):
+            # snappath = os.path.join(snapdir, snapbase+f"{icosmo:d}/rlz{irlz:d}/a_{(1./(1+zi)):.4f}/")
+            snappath = get_snappath(conf, icosmo, irlz, zi)
+            # gadgetpath = snappath+gadgetbase+"{:03d}".format(idx)
+            gadgetpath = get_gadgetpath(conf, icosmo, irlz, idx, zi)
 
-        ### I don't know why but this way works ...
-        ### TODO: add find parent and remove gadget snapshots/tmp halo file/tmp script
-        
-        f = open("tmp_run_rstar.sh", "w+")
-        f.write("#!/bin/bash\n")
-        f.write(f"RSTAR={Rockstar_exec}\n")
-        f.write(f"CFG={rstar_cfgpath}\n")
-        f.write(f"ODIR={snappath+rstaropbase}\n")
-        f.write("$RSTAR -c $CFG &\n")
-        f.write("export ODIR\n")
-        f.write("perl -e \'sleep 1 while (!(-e \"$ENV{ODIR}/auto-rockstar.cfg\"))\'\n")
-        f.write("$RSTAR -c ${ODIR}/auto-rockstar.cfg\n")
-        f.close()
-        os.system("bash tmp_run_rstar.sh")
+            ### execute convert
+            # Convert(snappath, gadgetpath, nfile, precision)
+
+            ### run rockstar
+            # rstar_cfgpath = os.path.join(cfgbase, cfgsubbase+f"{icosmo:d}/rlz{irlz:d}/rockstar/z{zi:.2f}.cfg")
+            rstar_cfgpath = get_rstar_cfgpath(conf, icosmo, irlz, zi)
+            halopath = get_halopath(conf, icosmo, irlz, zi)
+            if not os.path.isdir(halopath):
+                os.mkdir(halopath)
+            
+            tmp_script_name = f"tmp_run_rstar_{icosmo}_{irlz}_{idx}.sh"
+            rockstar_driver(rstar_cfgpath, gadgetpath, halopath, Rockstar_exec, FindPAR_exec)
 

@@ -3,54 +3,7 @@ import configparser
 import numpy as np
 from nbodykit.cosmology import LinearPower, Cosmology
 from .cfg_params import fastpm_default, rockstar_default
-
-def conf_get_list(conf, section, key, type, sep=", "):
-    return list(map(type, conf.get(section, key).split(sep)))
-
-def get_cosmo_params(conf):
-    cosmo_param_dict = {}
-
-    # check if `input` in `General` section
-    if "input" in conf.options("General"):
-        return NotImplementedError
-
-    if "n_fix_params" in conf.options("General"):
-        n_fix_params = conf["General"].getint("n_fix_params")
-        
-        if n_fix_params == 5:
-            return NotImplementedError
-        else:
-            ### load fixed params
-            fix_cosmo_names = conf_get_list(conf, "General", "fix_cosmo_names", str, ", ")
-            fix_cosmo_vals = conf_get_list(conf, "General", "fix_cosmo_vals", float, ", ")
-
-            cosmo_param_dict["fix"] = {}
-            for i in range(n_fix_params):
-                cosmo_param_dict["fix"][fix_cosmo_names[i]] = fix_cosmo_vals[i]
-            
-            ### load varied params
-            n_vari_params = conf["General"].getint("n_vari_params")
-            vari_cosmo_names = conf_get_list(conf, "General", "vari_cosmo_names", str, ", ")
-            prior_low = conf_get_list(conf, "General", "prior_low", float, ", ")
-            prior_up = conf_get_list(conf, "General", "prior_up", float, ", ")
-            seed = conf["General"].getint("seed")
-            ncosmo = conf["General"].getint("ncosmo")
-            cosmo_param_rng = np.random.default_rng(seed=seed)
-            vari_cosmo_vals = cosmo_param_rng.uniform(low=prior_low, high=prior_up, size=(ncosmo, n_vari_params))
-
-            cosmo_param_dict["vari"] = {}
-            for i in range(n_vari_params):
-                cosmo_param_dict["vari"][vari_cosmo_names[i]] = vari_cosmo_vals[:,i]
-
-            ### save parameters
-            cfgbase = str(conf.get("General", "cfgbase")).strip("\"")
-            output = str(conf.get("General", "output")).strip("\"")
-            f = open(os.path.join(cfgbase,output), "w+", encoding="utf-8")
-            f.write("# {}\n".format(" ".join(vari_cosmo_names)))
-            np.savetxt(f, vari_cosmo_vals, fmt="%3f %3f")
-            f.close()
-
-            return cosmo_param_dict, ncosmo
+from io_func import conf_get_list
 
 def mk_ini_Pk(cosmo_dict_input:dict, output):
     if "sigma8" not in cosmo_dict_input.keys() and "S8" in cosmo_dict_input.keys():

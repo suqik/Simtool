@@ -1,29 +1,26 @@
-import os, sys
+import argparse
 import configparser
+from src.utils.io_func import get_fpm_cfgpath, get_start_end
+from src.core.drivers import fastpm_driver
 
-if len(sys.argv) != 2:
-    print("Usage: python run_fastpm.py pipeline_conf/fpm_conf")
-    exit()
+argpar = argparse.ArgumentParser()
+argpar.add_argument("-c", "--conf", help="Pipeline config", type=str)
+argpar.add_argument("-cs", "--cosmo_start", help="Staring label of cosmology", type=int, default=0)
+argpar.add_argument("-ce", "--cosmo_end", help="Ending label of cosmology, minus means running all", type=int, default=-1)
+argpar.add_argument("-rs", "--rlz_start", help="Staring label of realization", type=int, default=0)
+argpar.add_argument("-re", "--rlz_end", help="Ending label of realization, minus means running all", type=int, default=-1)
 
-conf_file = sys.argv[1]
-if not os.path.isfile(os.path.join(os.getcwd(), conf_file)):
-    print("Configure file does not exist!")
-    exit()
+args = argpar.parse_args()
+conf = configparser.ConfigParser()
+conf.read(args.conf)
 
-if conf_file.split(".")[-1] == "ini":
-    conf = configparser.ConfigParser()
-    conf.read(conf_file)
-    base = conf.get("General","cfgbase").strip("\"")
-    subbase = conf.get("General","cfgsubbase").strip("\"")
-    ncosmo = conf["General"].getint("ncosmo")
+cosmo_start, cosmo_end = get_start_end(conf, args, "cosmo")
+rlz_start, rlz_end = get_start_end(conf, args, "crlz")
 
-    FastPM_exec = "/public/home/suchen/applications/fastpm_intel/src/fastpm"
-    nCPUs = 32
-    cmd = "mpirun -np "+f"{nCPUs} "+FastPM_exec+" "
-
-    os.environ["OMP_NUM_THREADS"] = "1"
-    for i in range(1):
-        fpm_cfgpath = base+subbase+f"{i}/fastpm/fpm.lua"
-        cmd += fpm_cfgpath
-        print(cmd, flush=True)
-        os.system(cmd)
+for icosmo in range(cosmo_start, cosmo_end):
+    for irlz in range(rlz_start, rlz_end):
+        # base = conf.get("General","cfgbase").strip("\"")
+        # subbase = conf.get("General","cfgsubbase").strip("\"")
+        # fpm_cfgpath = os.path.join(base, subbase+f"{icosmo}/rlz{irlz}/fastpm/fpm.lua")
+        fpm_cfgpath = get_fpm_cfgpath(conf, icosmo, irlz)
+        fastpm_driver(conf, fpm_cfgpath)
