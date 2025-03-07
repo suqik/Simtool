@@ -4,3 +4,4 @@ Pipeline/src/deprecated/
 Pipeline/cfgs/Cosmology/
 Pipeline/cfgs/input.ini
 .ipynb_checkpoints
+Pipeline/src/gen_cosmo_sham.py
