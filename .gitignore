@@ -3,5 +3,6 @@ Pipeline/src/utils/__pycache__/
 Pipeline/src/deprecated/
 Pipeline/cfgs/Cosmology/
 Pipeline/cfgs/input.ini
+Pipeline/src/core/__pycache__/
 .ipynb_checkpoints
 Pipeline/src/gen_cosmo_sham.py
