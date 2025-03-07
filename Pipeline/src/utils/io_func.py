@@ -42,7 +42,7 @@ def get_sham_params(conf:configparser.ConfigParser):
 
 def get_snappath(conf, icosmo, irlz, zi):
     snapdir = conf.get("FastPM", "snapdir").strip("\"")
-    snapbase = conf.get("FastPM", "snapbase").strip("\"")
+    snapbase = conf.get("General", "cfgsubbase").strip("\"")
     snappath = os.path.join(snapdir, snapbase+f"{icosmo:d}/rlz{irlz:d}/a_{(1./(1+zi)):.4f}/")
     return snappath
 
@@ -89,13 +89,9 @@ def get_start_end(conf, args, label):
         start = args.cosmo_start
         end = args.cosmo_end
     elif label == "crlz":
-        ntot = conf["General"].getint("nrlzs")
-        try:
-            start = args.rlz_start
-            end   = args.rlz_end
-        except:
-            start = args.crlz_start
-            end   = args.crlz_end
+        ntot = conf["FastPM"].getint("nrlzs")
+        start = args.crlz_start
+        end   = args.crlz_end
     elif label == "sham":
         sdict = get_sham_params(conf)
         ntot = sdict["nsham"]

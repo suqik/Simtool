@@ -1,9 +1,8 @@
 import os
-import configparser
 import numpy as np
 from nbodykit.cosmology import LinearPower, Cosmology
 from .cfg_params import fastpm_default, rockstar_default
-from io_func import conf_get_list
+from .io_func import conf_get_list
 
 def mk_ini_Pk(cosmo_dict_input:dict, output):
     if "sigma8" not in cosmo_dict_input.keys() and "S8" in cosmo_dict_input.keys():

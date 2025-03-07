@@ -47,12 +47,15 @@ for icosmo in range(cosmo_start, cosmo_end):
         for zi in redshifts:
             halopath = get_halopath(conf, icosmo, icrlz, zi)
             for isham in range(sham_start, sham_end):
-                sham_param_vals = [f"cosmo{icosmo}"][f"rlz{icrlz}"][f"z{zi:.2f}"][isham]
+                sham_param_vals = sham_param_dict[f"cosmo{icosmo}"][f"rlz{icrlz}"][f"z{zi:.2f}"][isham]
                 # FIXME: Can be moved to very beginning
                 seed_offset = 0
                 for isrlz in range(srlz_start, srlz_end):
                     galpath = get_galpath(conf, icosmo, icrlz, zi, isham, isrlz, feature)
                     voidpath = get_voidpath(conf, icosmo, icrlz, zi, isham, isrlz, feature)
+                    gal_void_dir = os.path.dirname(galpath)
+                    if not os.path.isdir(gal_void_dir):
+                        os.makedirs(gal_void_dir)
                     gal_void_driver(
                         sham_param_names, 
                         sham_param_vals, 

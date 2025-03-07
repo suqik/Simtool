@@ -10,8 +10,8 @@ argpar = argparse.ArgumentParser()
 argpar.add_argument("-c", "--conf", help="Pipeline config", type=str)
 argpar.add_argument("-cs", "--cosmo_start", help="Staring label of cosmology", type=int, default=0)
 argpar.add_argument("-ce", "--cosmo_end", help="Ending label of cosmology, minus means running all", type=int, default=-1)
-argpar.add_argument("-rs", "--rlz_start", help="Staring label of realization", type=int, default=0)
-argpar.add_argument("-re", "--rlz_end", help="Ending label of realization, minus means running all", type=int, default=-1)
+argpar.add_argument("-crs", "--crlz_start", help="Staring label of realization", type=int, default=0)
+argpar.add_argument("-cre", "--crlz_end", help="Ending label of realization, minus means running all", type=int, default=-1)
 
 args = argpar.parse_args()
 
@@ -36,8 +36,7 @@ redshifts = conf_get_list(conf, "FastPM", "redshifts", float, sep=", ")
 # cfgsubbase = conf.get("General","cfgsubbase").strip("\"")
 # halobase = conf.get("ROCKSTAR", "outputbase").strip("\"")
 
-Rockstar_exec = "/public/home/suchen/applications/rockstar/rockstar"
-FindPAR_exec = "/public/home/suchen/applications/rockstar/util/find_parents"
+Rockstar_exec = "/home/suqikuai777/applications/Simulations/rockstar/rockstar"
 
 os.environ["OMP_NUM_THREADS"] = "1"
 
@@ -64,5 +63,7 @@ for icosmo in range(cosmo_start, cosmo_end):
                 os.mkdir(halopath)
             
             tmp_script_name = f"tmp_run_rstar_{icosmo}_{irlz}_{idx}.sh"
-            rockstar_driver(rstar_cfgpath, gadgetpath, halopath, Rockstar_exec, FindPAR_exec)
+            rockstar_driver(
+                snappath, gadgetpath, nfile, precision, rstar_cfgpath, halopath, tmp_script_name, Rockstar_exec
+                )
 

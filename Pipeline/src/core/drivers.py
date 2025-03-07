@@ -1,7 +1,7 @@
 import os
 import numpy as np
-from convert import Convert
-from sham import load_halo_head_data, SHAM_sigma_model
+from .convert import Convert
+from .sham import load_halo_head_data, SHAM_sigma_model
 ##===================== Driver Functions ========================##
 
 def fastpm_driver(
@@ -10,16 +10,17 @@ def fastpm_driver(
         nCPUs = 32
         ):
     
+    os.environ["OMP_NUM_THREADS"] = "1"
     cmd = "mpirun -np "+f"{nCPUs} "+FastPM_exec+" "+fpm_cfgpath
     print(cmd, flush=True)
     os.system(cmd)
 
 def rockstar_driver(
         snappath,
+        gadgetpath,
         nfile, 
         precision,
         rstar_cfgpath,
-        gadgetpath,
         halopath, 
         tmp_script_name,
         Rockstar_exec = "/public/home/suchen/applications/rockstar/rockstar",
@@ -50,7 +51,7 @@ def rockstar_driver(
 
     f.close()
     os.system(f"bash {tmp_script_name}")
-    os.system(f"rm {tmp_script_name}")
+    # os.system(f"rm {tmp_script_name}")
 
 def gal_void_driver(
         sham_param_names, 
@@ -68,13 +69,15 @@ def gal_void_driver(
     
     halo = load_halo_head_data(halopath, halofinder, feature, zspace)
     pos = np.c_[halo["x"], halo["y"], halo["z"]]
+    ftr = halo[feature]
+    
     boxsize = halo.meta['boxsize']
 
     sham_param_names = np.atleast_1d(sham_param_names)
     sham_param_vals = np.atleast_1d(sham_param_vals)
-
+    
     if len(sham_param_names) == 1 and sham_param_names[0] == "sigma":
-        gsamples = SHAM_sigma_model(sham_param_vals[0], pos, feature, boxsize, ref_num_den, seed)
+        gsamples = SHAM_sigma_model(sham_param_vals[0], pos, ftr, boxsize, ref_num_den, seed)
         np.savetxt(galpath, gsamples[:,:3], fmt="%.3f %.3f %.3f")
     
     os.system(f"{DIVE_exec} -i {galpath} -o {voidpath} -u {boxsize}")

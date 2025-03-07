@@ -26,6 +26,7 @@ def load_halo_head_data(fname, halofinder="rockstar", feature="mvir", zspace=Fal
         return load_rockstar_head_data(fname, feature, zspace)
     
 def load_rockstar_head_data(fname:str, feature:str, zspace:bool=False, los:str="z")->Table:
+    fname = os.path.join(fname, "out_0.list")
     if not os.path.isfile(fname):
         raise FileNotFoundError(f"File {fname} does not exist!")
 
@@ -45,19 +46,19 @@ def load_rockstar_head_data(fname:str, feature:str, zspace:bool=False, los:str="
     halo = Table(meta={'boxsize': boxsize, 'redshift': redshift, 'OmegaM': OmegaM})
     tmp = np.loadtxt(fname)
 
-    halo["x"] = tmp[rockstar_idx_dict["x"]]
-    halo["y"] = tmp[rockstar_idx_dict["y"]]
-    halo["z"] = tmp[rockstar_idx_dict["z"]]
+    halo["x"] = tmp[:,rockstar_idx_dict["x"]]
+    halo["y"] = tmp[:,rockstar_idx_dict["y"]]
+    halo["z"] = tmp[:,rockstar_idx_dict["z"]]
 
     if zspace:
-        s_los = cal_zrsd(OmegaM, redshift, halo[los], tmp[rockstar_idx_dict[los]])
+        s_los = cal_zrsd(OmegaM, redshift, halo[:,los], tmp[:,rockstar_idx_dict[los]])
         halo[los] = s_los
 
-    halo[feature] = tmp[rockstar_idx_dict[feature]]
+    halo[feature] = tmp[:,rockstar_idx_dict[feature]]
     
     return halo
 
-def SHAM_sigma_model(sigma, pos, feature, boxsize, ref_num_den=3.5e-4, seed=None):
+def SHAM_sigma_model(sigma, pos, ftr_val, boxsize, ref_num_den=3.5e-4, seed=None):
     rng = np.random.default_rng(seed=seed)
 
     Nhalo = len(pos)
@@ -69,9 +70,9 @@ def SHAM_sigma_model(sigma, pos, feature, boxsize, ref_num_den=3.5e-4, seed=None
 
     Ntarget = int(boxsize*boxsize*boxsize*ref_num_den)
 
-    feature_scat = feature*scatter
+    ftr_scat = ftr_val*scatter
 
-    idxed_arr = np.c_[pos, feature_scat]
+    idxed_arr = np.c_[pos, ftr_scat]
     gsamples = heapq.nlargest(Ntarget, idxed_arr, key=lambda x:x[-1])
     gsamples = np.asarray(gsamples)
 

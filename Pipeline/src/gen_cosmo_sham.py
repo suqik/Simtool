@@ -94,7 +94,7 @@ if __name__ == "__main__":
     conf = configparser.ConfigParser()
     conf.read(sys.argv[1])
 
-    ncosmo = 10
+    ncosmo = 1
 
     cfgbase = str(conf.get("General", "cfgbase")).strip("\"")
     if not os.path.isdir(cfgbase):
@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     nrlz_per_cosmo = conf["FastPM"].getint("nrlzs")
     redshifts = conf_get_list(conf, "FastPM", "redshifts", float)
-    nsham = 10
+    nsham = 1
     
     soutput = str(conf.get("SHAM", "input")).strip("\"")
 

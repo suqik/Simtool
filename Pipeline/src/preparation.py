@@ -1,7 +1,6 @@
-import os, sys
+import os
 import argparse
 import configparser
-import numpy as np
 from utils.mk_conf_func import *
 from utils.io_func import get_cosmo_params
 
