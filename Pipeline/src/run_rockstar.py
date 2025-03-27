@@ -12,6 +12,7 @@ argpar.add_argument("-cs", "--cosmo_start", help="Staring label of cosmology", t
 argpar.add_argument("-ce", "--cosmo_end", help="Ending label of cosmology, minus means running all", type=int, default=-1)
 argpar.add_argument("-crs", "--crlz_start", help="Staring label of realization", type=int, default=0)
 argpar.add_argument("-cre", "--crlz_end", help="Ending label of realization, minus means running all", type=int, default=-1)
+argpar.add_argument("--RSTAR_PATH", help="absolute path of ROCKSTAR executable file.", type=str)
 
 args = argpar.parse_args()
 
@@ -36,7 +37,7 @@ redshifts = conf_get_list(conf, "FastPM", "redshifts", float, sep=", ")
 # cfgsubbase = conf.get("General","cfgsubbase").strip("\"")
 # halobase = conf.get("ROCKSTAR", "outputbase").strip("\"")
 
-Rockstar_exec = "/home/suqikuai777/applications/Simulations/rockstar/rockstar"
+Rockstar_exec = args.RSTAR_PATH
 
 os.environ["OMP_NUM_THREADS"] = "1"
 

@@ -13,6 +13,7 @@ argpar.add_argument("-ss", "--sham_start", help="Staring label of cosmology", ty
 argpar.add_argument("-se", "--sham_end", help="Ending label of cosmology, minus means running all", type=int, default=-1)
 argpar.add_argument("-srs", "--srlz_start", help="Staring label of sham realization", type=int, default=0)
 argpar.add_argument("-sre", "--srlz_end", help="Ending label of sham realization, minus means running all", type=int, default=-1)
+argpar.add_argument("--DIVE_PATH", help="absolute path of DIVE executable file.", type=str)
 
 args = argpar.parse_args()
 
@@ -35,7 +36,7 @@ feature = conf.get("SHAM", "feature").strip("\"")
 zspace = conf["SHAM"].getboolean("z_space")
 outputbase = conf.get("SHAM", "outputbase").strip("\"")
 
-DIVE_exec = "/home/suqikuai777/applications/special/DIVE/DIVE"
+DIVE_exec = args.DIVE_PATH
 
 cosmo_start, cosmo_end = get_start_end(conf, args, "cosmo")
 crlz_start, crlz_end = get_start_end(conf, args, "crlz")
